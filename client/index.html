@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Risovalka</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="style.css" />
+      <script src="socket.io/socket.io.js"></script>
+      <script src="client.js"></script>
+   </head>
+   <body>
+
+       <div class="controlPanel">
+           <div id="brush" for="brush" class="tool current">
+               <img data="brush" class="iconTool" src="./icons/brush.png" alt="">
+            </div>
+           <div id="line" for="line" class="tool">
+               <img data="line" class="iconTool" src="./icons/line.png" alt="">
+            </div>
+           <div id="rect" for="rect" class="tool">
+               <img data="rect" class="iconTool" src="./icons/rectangle.png" alt="">
+            </div>
+           <div id="circle" for="circle" class="tool">
+               <img data="circle" class="iconTool" src="./icons/circle.png" alt="">
+            </div>
+           <div id="eraser" for="eraser" class="tool">
+               <img data="eraser" class="iconTool" src="./icons/eraser.png" alt="">
+            </div>
+            <input type="color" id="color">
+            <div class="thicknessPanel">
+                <label class="thickness" for="thin">
+                    <input class="thicknessInput" id="thin" type="radio" name="thickness"  value=5> small
+                </label>
+                <label class="thickness" for="medium">
+                    <input checked class="thicknessInput" id="medium" type="radio" name="thickness"  value=10> medium
+                </label>
+                <label class="thickness" for="thick">
+                    <input class="thicknessInput" id="thick" type="radio" name="thickness"  value=20> large
+                </label>
+            </div>
+        </div>
+       <div class="canvasBox">
+            <canvas id="drawingLayer" width="1000px" height="1000px"></canvas>
+            <canvas id="eventLayer" width="1000px" height="1000px"></canvas>        
+       </div>
+   </body>
+</html>

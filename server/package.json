@@ -1,0 +1,9 @@
+{
+  "name": "Risovalka",
+  "description": "Interaktivnaya real-time risovalka",
+  "author": "Dimonchik",
+  "dependencies": {
+    "express": "4.x",
+    "socket.io": "^2.0.3"
+  }
+}
